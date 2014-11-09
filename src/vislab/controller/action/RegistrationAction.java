@@ -33,9 +33,7 @@ public class RegistrationAction extends ActionSupport {
 			customer.setUsername(getUsername());
 			customer.setFirstname(getFirstname());
 			customer.setLastname(getLastname());
-			
-			setFirstname(customer.getFirstname());
-			setLastname(customer.getLastname());	
+
 			customerManager.saveCustomer(customer) ;
 			
 			return SUCCESS;
@@ -51,7 +49,7 @@ public class RegistrationAction extends ActionSupport {
 		return lastname;
 	}
 	
-	private void setLastname(String lastname) {
+	public void setLastname(String lastname) {
 		this.lastname = lastname;	
 	}
 
@@ -59,7 +57,7 @@ public class RegistrationAction extends ActionSupport {
 		return firstname;
 	}
 
-	private void setFirstname(String firstname) {
+	public void setFirstname(String firstname) {
 		this.firstname = firstname;
 	}
 

@@ -5,12 +5,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Beispiel Login Seite</title>
+<title><s:text name="welcome.title"/></title>
 	<s:head/>
 </head>
 <body>
 
-	<s:text name="welcome.title" />
+	<h2><s:text name="welcome.title" /></h2>
 	 
 	<s:form action="User_login" focusElement="username" >
 		<s:textfield name="username" key="prompt.username" size="20" />

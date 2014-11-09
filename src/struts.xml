@@ -14,7 +14,7 @@
 
     <!-- Add packages here -->
     
-        <package name="vislabExample" extends="struts-default">
+        <package name="vislab" extends="struts-default">
         
         <!-- Add your actions here  -->
         

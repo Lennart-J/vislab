@@ -5,18 +5,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Beispiel Login Seite</title>
+<title><s:text name="welcome.title"/></title>
 	<s:head/>
 </head>
 <body>
 
-	<s:text name="welcome.title" />
+	<h2><s:text name="welcome.title" /></h2>
 	 
 	<s:form action="User_register" focusElement="username" >
-		<s:textfield name="username" key="prompt.username" size="20" />
-		<s:textfield name="firstname" key="prompt.firstname" size="20" />
-		<s:textfield name="lastname" key="prompt.lastname" size="20" />
-		<s:password name="password" key="prompt.password" size="20" /><br>
+		<s:textfield name="username" key="prompt.username" size="20"/>
+		<s:password name="password" key="prompt.password" size="20"/>
+		<s:textfield name="lastname" key="prompt.lastname" size="20"/>
+		<s:textfield name="firstname" key="prompt.firstname" size="20"/><br>
 		
 		<s:submit method="execute" value="register" align="center"/>
 	</s:form>
