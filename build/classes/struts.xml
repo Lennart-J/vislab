@@ -35,6 +35,16 @@
             <result name="success">/pages/welcome.jsp</result>
             <result name="input">/pages/Registration.jsp</result>
         </action>
+        
+        <action name="Category_create" class="vislab.controller.action.CreateCategoryAction" method="create">
+            <result name="success">/pages/Category.jsp</result>
+            <result name="input">/pages/Category.jsp</result>
+        </action>
+        
+        <action name="Category_delete" class="vislab.controller.action.DeleteCategoryAction" method="delete">
+            <result name="success">/pages/Category.jsp</result>
+            <result name="input">/pages/Category.jsp</result>
+        </action>
     </package>
     
 

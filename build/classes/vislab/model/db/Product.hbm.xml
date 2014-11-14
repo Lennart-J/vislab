@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 30.10.2014 11:14:31 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+ <class name="vislab.model.db.Product" table="PRODUCT">
+  <id name="name" type="string">
+   <column length="8" name="NAME"/>
+   <generator class="assigned"/>
+  </id>
+  <property generated="never" lazy="false" length="500"
+   name="description" type="text">
+   <column length="500" name="DESCRIPTION"/>
+  </property>
+  <property generated="never" lazy="false" name="price" type="float">
+   <column name="PRICE"/>
+  </property>
+  <property generated="never" lazy="false" name="available" type="int">
+   <column name="AVAILABLE"/>
+  </property>
+  <property generated="never" lazy="false" name="image" type="string">
+   <column name="IMAGE"/>
+  </property>
+  
+  <many-to-one name="Category" class="vislab.model.db.Category"
+            column="CATEGORYID" unique="true" not-null="true"
+            cascade="all" />
+ </class>
+</hibernate-mapping>

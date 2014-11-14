@@ -14,5 +14,8 @@
   <property name="hibernate.connection.username">root</property>
   <property name="hibernate.connection.password">root</property>
   <mapping resource="vislab/model/db/Customer.hbm.xml"/>
+  <mapping resource="vislab/model/db/Product.hbm.xml"/>
+  <mapping resource="vislab/model/db/Category.hbm.xml"/>
+  
  </session-factory>
 </hibernate-configuration>
