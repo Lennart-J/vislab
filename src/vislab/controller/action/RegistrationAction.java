@@ -1,6 +1,5 @@
 package vislab.controller.action;
 
-
 import com.opensymphony.xwork2.ActionSupport;
 
 import vislab.model.bl.CustomerManager;
@@ -17,16 +16,15 @@ public class RegistrationAction extends ActionSupport {
 	private String password = null;
 	private String firstname = null;
 	private String lastname = null;
-	
-	
-	
+
 	public String execute() throws Exception {
-		
-	   	CustomerManager customerManager = new CustomerManager();
-	   	
-		Customer customer = customerManager.getCustomerByPrimaryKey(getUsername());
-	    
-	   	if (customer == null) {
+
+		CustomerManager customerManager = new CustomerManager();
+
+		Customer customer = customerManager
+				.getCustomerByPrimaryKey(getUsername());
+
+		if (customer == null) {
 			customer = new Customer();
 
 			customer.setPassword(getPassword());
@@ -34,23 +32,22 @@ public class RegistrationAction extends ActionSupport {
 			customer.setFirstname(getFirstname());
 			customer.setLastname(getLastname());
 
-			customerManager.saveCustomer(customer) ;
-			
+			customerManager.saveCustomer(customer);
+
 			return SUCCESS;
-	   	}
-	   	else {
+		} else {
 			addActionError("Benutzername bereits vergeben!");
 			return "input";
-	   	}
+		}
 
 	}
-	
+
 	public String getLastname() {
 		return lastname;
 	}
-	
+
 	public void setLastname(String lastname) {
-		this.lastname = lastname;	
+		this.lastname = lastname;
 	}
 
 	public String getFirstname() {
@@ -61,16 +58,25 @@ public class RegistrationAction extends ActionSupport {
 		this.firstname = firstname;
 	}
 
-    public String getUsername() { return (this.username); }
-    public void setUsername(String username) { this.username = username; }
+	public String getUsername() {
+		return (this.username);
+	}
 
-    public String getPassword() { return (this.password); }
-    public void setPassword(String password) { this.password  = password; }
+	public void setUsername(String username) {
+		this.username = username;
+	}
 
-    
-    @Override
-    public void validate() {
-    	super.validate();
-    }
+	public String getPassword() {
+		return (this.password);
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	@Override
+	public void validate() {
+		super.validate();
+	}
 
 }

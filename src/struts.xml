@@ -5,10 +5,10 @@
 
 <struts>
 
-    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
     <constant name="struts.devMode" value="false" />
     <constant name="struts.custom.i18n.resources" value="ApplicationResources" /> 
-    
+    <constant name="struts.mapper.action.prefix.enabled" value="true" />
 
 
 
@@ -36,15 +36,11 @@
             <result name="input">/pages/Registration.jsp</result>
         </action>
         
-        <action name="Category_create" class="vislab.controller.action.CreateCategoryAction" method="create">
+        <action name="Category_edit" class="vislab.controller.action.EditCategoryAction">
             <result name="success">/pages/Category.jsp</result>
             <result name="input">/pages/Category.jsp</result>
         </action>
-        
-        <action name="Category_delete" class="vislab.controller.action.DeleteCategoryAction" method="delete">
-            <result name="success">/pages/Category.jsp</result>
-            <result name="input">/pages/Category.jsp</result>
-        </action>
+      
     </package>
     
 

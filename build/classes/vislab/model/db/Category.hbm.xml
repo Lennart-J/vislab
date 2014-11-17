@@ -4,11 +4,9 @@
 <!-- Generated 30.10.2014 11:14:31 by Hibernate Tools 4.0.0 -->
 <hibernate-mapping>
  <class name="vislab.model.db.Category" table="CATEGORY">
-  <id name="id" column="ID">
-   	<generator class="native"/>
+ <id name="name" type="string">
+            <column length="8" name="NAME"/>
+            <generator class="assigned"></generator>
   </id>
-  <property generated="never" lazy="false" name="name" type="string">
-   <column length="8" name="NAME"/>
-  </property>
  </class>
 </hibernate-mapping>

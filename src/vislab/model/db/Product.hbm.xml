@@ -23,7 +23,7 @@
   </property>
   
   <many-to-one name="Category" class="vislab.model.db.Category"
-            column="CATEGORYID" unique="true" not-null="true"
+            column="CATEGORY" unique="true" not-null="true"
             cascade="all" />
  </class>
 </hibernate-mapping>

@@ -21,8 +21,8 @@ public class Product implements java.io.Serializable {
 	public Product() {
 	}
 
-	public Product(String name, String description, float price,
-			int available, String image, Category category) {
+	public Product(String name, String description, float price, int available,
+			String image, Category category) {
 		this.name = name;
 		this.description = description;
 		this.price = price;
@@ -70,7 +70,6 @@ public class Product implements java.io.Serializable {
 	public void setImage(String image) {
 		this.image = image;
 	}
-
 
 	public Category getCategory() {
 		return category;
