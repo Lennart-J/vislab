@@ -2,40 +2,40 @@ package vislab.model.bl;
 
 import org.hibernate.Session;
 
-import vislab.model.db.Category;
+import vislab.model.db.Product;
 import vislab.model.sf.HibernateUtil;
 
 /**
- * class für KategorieObjekte
+ * class für ProduktObjekte
  */
 
-public class CategoryManager {
+public class ProductManager {
 
-	public Category getCategoryByPrimaryKey(String primaryKey) {
+	public Product getProductByPrimaryKey(String primaryKey) {
 		/* a Hibernate session */
 		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
 		session.beginTransaction();
-		Category category = (Category) session.get(Category.class, primaryKey);
+		Product product = (Product) session.get(Product.class, primaryKey);
 		session.getTransaction().commit();
-		return category;
+		return product;
 	}
 
-	public void deleteCategory(Category category) {
+	public void deleteProduct(Product product) {
 		/* a Hibernate session */
 		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
 		session.beginTransaction();
-		session.delete(category);
+		session.delete(product);
 		session.getTransaction().commit();
 	}
 
-	public void saveCategory(Category category) {
+	public void saveProduct(Product product) {
 		/* a Hibernate session */
 		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
 		session.beginTransaction();
-		session.save(category);
+		session.save(product);
 		session.getTransaction().commit();
 	}
 }

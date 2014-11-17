@@ -18,8 +18,8 @@
 		<s:textfield name="name" key="prompt.category" size="20" />
 		<br>
 
-		<s:submit method="create" value="Create" name="create" />
-		<s:submit method="delete" value="Delete" name="delete" />
+		<s:submit method="create" value="Erstellen" name="create" />
+		<s:submit method="delete" value="Löschen" name="delete" />
 	</s:form>
 
 	<font color="red"> <s:actionerror label="label" />

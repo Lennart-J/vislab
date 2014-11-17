@@ -10,13 +10,17 @@
 </head>
 <body>
 
-	<h2><s:text name="welcome.title" /></h2>
+	<h2><s:text name="Produkt bearbeiten" /></h2>
 	 
-	<s:form action="User_login" focusElement="username" >
-		<s:textfield name="username" key="prompt.username" size="20" />
-		<s:password name="password" key="prompt.password" size="20" /><br>
+	<s:form action="Product_edit" focusElement="name" >
+		<s:textfield name="name" key="prompt.product" size="25" />
 		
-		<s:submit method="execute" value="login" align="center"/>
+		<s:textarea name="description" key="prompt.description" rows="5" />
+		<s:textfield name="price" key="prompt.price" size="25" />
+		<s:textfield name="available" key="prompt.available" size="25" />
+		<s:textfield name="image" key="prompt.image" size="25" /> <br>
+		
+		<s:submit method="create" value="Erstellen"/>
 	</s:form>
 	 
 	 <font color="red">

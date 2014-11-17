@@ -40,6 +40,12 @@
             <result name="success">/pages/Category.jsp</result>
             <result name="input">/pages/Category.jsp</result>
         </action>
+        
+        <action name="Product_edit" class="vislab.controller.action.EditProductAction">
+            <result name="success">/pages/Product.jsp</result>
+            <result name="input">/pages/Product.jsp</result>
+        </action>
+       
       
     </package>
     

@@ -11,9 +11,10 @@ public class Product implements java.io.Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	
 	private String name;
 	private String description;
-	private float price;
+	private double price;
 	private int available;
 	private String image;
 	private Category category;
@@ -21,7 +22,7 @@ public class Product implements java.io.Serializable {
 	public Product() {
 	}
 
-	public Product(String name, String description, float price, int available,
+	public Product(String name, String description, double price, int available,
 			String image, Category category) {
 		this.name = name;
 		this.description = description;
@@ -47,11 +48,11 @@ public class Product implements java.io.Serializable {
 		this.description = description;
 	}
 
-	public float getPrice() {
+	public double getPrice() {
 		return price;
 	}
 
-	public void setPrice(float price) {
+	public void setPrice(double price) {
 		this.price = price;
 	}
 
@@ -78,4 +79,5 @@ public class Product implements java.io.Serializable {
 	public void setCategory(Category category) {
 		this.category = category;
 	}
+
 }

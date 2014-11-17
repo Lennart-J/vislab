@@ -8,22 +8,22 @@
    <column length="8" name="NAME"/>
    <generator class="assigned"/>
   </id>
-  <property generated="never" lazy="false" length="500"
+  <property length="500"
    name="description" type="text">
    <column length="500" name="DESCRIPTION"/>
   </property>
-  <property generated="never" lazy="false" name="price" type="float">
+  <property name="price" type="double">
    <column name="PRICE"/>
   </property>
-  <property generated="never" lazy="false" name="available" type="int">
+  <property name="available" type="int">
    <column name="AVAILABLE"/>
   </property>
-  <property generated="never" lazy="false" name="image" type="string">
+  <property name="image" type="string">
    <column name="IMAGE"/>
   </property>
   
   <many-to-one name="Category" class="vislab.model.db.Category"
-            column="CATEGORY" unique="true" not-null="true"
+            column="CATEGORY" unique="false" not-null="true"
             cascade="all" />
  </class>
 </hibernate-mapping>
