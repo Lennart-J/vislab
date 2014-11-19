@@ -11,14 +11,13 @@
 <body>
 
 	<h2>
-		<s:text name="Kategorie bearbeiten" />
+		<s:text name="Produkt löschen" />
 	</h2>
 
-	<s:form action="Category_edit" focusElement="name">
-		<s:textfield name="name" key="prompt.category" size="20" />
+	<s:form action="Product_delete" focusElement="name">
+		<s:textfield name="name" key="prompt.product" size="20" />
 		<br>
 
-		<s:submit method="create" value="Erstellen" name="create" />
 		<s:submit method="delete" value="Löschen" name="delete" />
 	</s:form>
 

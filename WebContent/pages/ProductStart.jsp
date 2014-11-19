@@ -15,8 +15,17 @@
 		
 		<p><s:text name="Wollen Sie ein Produkt erstellen oder ein Produkt löschen?"/></p>
 		
-		<s:submit method="create" value="Erstellen" name="create" />
-		<s:submit method="delete" value="Löschen" name="delete" />
+	
+		<p>
+			<a href="<s:url action="Product_start" method="create"/>">
+				<s:text name="Produkt erstellen"/>
+			</a>
+		</p>
+		<p>
+			<a href="<s:url action="Product_start" method="delete"/>">
+				<s:text name="Produkt löschen"/>
+			</a>
+		</p>
 		
 	</body>
 </html>

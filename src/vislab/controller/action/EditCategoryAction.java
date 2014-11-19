@@ -22,6 +22,7 @@ public class EditCategoryAction extends ActionSupport {
 			category.setName(getName());
 
 			categoryManager.saveCategory(category);
+			addActionMessage("Sie haben die Kategorie " + getName() + " angelegt.");
 
 			return SUCCESS;
 		} else {
@@ -37,7 +38,10 @@ public class EditCategoryAction extends ActionSupport {
 		Category category = categoryManager.getCategoryByPrimaryKey(getName());
 
 		if (category != null) {
+			String name = getName();
 			categoryManager.deleteCategory(category);
+			addActionMessage("Sie haben die Kategorie " + name + " gelöscht.");
+			
 			return SUCCESS;
 		} else {
 			addActionError("Kategorie nicht vorhanden!");

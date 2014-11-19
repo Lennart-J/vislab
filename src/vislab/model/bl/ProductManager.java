@@ -38,4 +38,5 @@ public class ProductManager {
 		session.save(product);
 		session.getTransaction().commit();
 	}
+	
 }

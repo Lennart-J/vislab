@@ -46,6 +46,15 @@
             <result name="input">/pages/Product.jsp</result>
         </action>
        
+       <action name="Product_delete" class="vislab.controller.action.EditProductAction">
+            <result name="success">/pages/ProductDelete.jsp</result>
+            <result name="input">/pages/ProductDelete.jsp</result>
+        </action>
+      
+      <action name="Product_start" class="vislab.controller.action.StartProductAction">
+            <result name="create">/pages/Product.jsp</result>
+            <result name="delete">/pages/ProductDelete.jsp</result>
+        </action>
       
     </package>
     

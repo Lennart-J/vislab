@@ -5,11 +5,11 @@
 <hibernate-mapping>
     <class name="vislab.model.db.Customer" table="CUSTOMER">
         <id name="username" type="string">
-            <column name="USERNAME" length="8" />
+            <column name="USERNAME" length="15" />
             <generator class="assigned"></generator>
         </id>
         <property name="password" type="string">
-            <column name="PASSWORD" length="8" />
+            <column name="PASSWORD" length="15" />
         </property>
         <property name="lastname" type="string">
             <column name="LASTNAME" length="20" />

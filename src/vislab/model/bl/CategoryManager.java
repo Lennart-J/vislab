@@ -1,5 +1,7 @@
 package vislab.model.bl;
 
+import java.util.List;
+
 import org.hibernate.Session;
 
 import vislab.model.db.Category;
@@ -37,5 +39,12 @@ public class CategoryManager {
 		session.beginTransaction();
 		session.save(category);
 		session.getTransaction().commit();
+	}
+	
+	public List<Category> getAllCategories() {
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+		List<Category> categories = session.createCriteria(Category.class).list();
+		session.getTransaction().commit();
+		return categories;	
 	}
 }
