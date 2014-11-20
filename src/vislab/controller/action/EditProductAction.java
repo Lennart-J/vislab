@@ -25,6 +25,7 @@ public class EditProductAction extends ActionSupport {
 
 		if (product == null) {
 			product = new Product();
+			int i = 0;
 
 			product.setName(getName());
 			product.setDescription(getDescription());
