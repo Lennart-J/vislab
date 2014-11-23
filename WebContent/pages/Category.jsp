@@ -22,8 +22,12 @@
 		<s:submit method="delete" value="Löschen" name="delete" />
 	</s:form>
 
-	<font color="red"> <s:actionerror label="label" />
+	<font color="red">
+		<s:actionerror label="label" />
 	</font>
-
+	<font color="blue">
+		<s:actionmessage label="label" />
+	</font>
+	
 </body>
 </html>

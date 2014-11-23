@@ -14,7 +14,7 @@
 	 
 	<s:form action="Product_edit" focusElement="name" >
 		<s:textfield name="name" key="prompt.product" size="25" />
-		
+		<s:textfield name="category" key="prompt.category" size="25" />
 		<s:textarea name="description" key="prompt.description" rows="5" />
 		<s:textfield name="price" key="prompt.price" size="25" />
 		<s:textfield name="available" key="prompt.available" size="25" />
@@ -22,10 +22,12 @@
 		
 		<s:submit method="create" value="Erstellen"/>
 	</s:form>
-	 
 	 <font color="red">
 	 	<s:actionerror label="label" />
 	 </font>
-	 
+	<font color="blue">
+		<s:actionmessage label="label" />
+	</font>
+			 	 
  </body>
 </html>

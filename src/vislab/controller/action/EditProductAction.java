@@ -14,29 +14,34 @@ public class EditProductAction extends ActionSupport {
 	private int available = 0;
 	private String image = null;
 	private double price = 0.00;
+	private String category = null;
 	
 	
 	public String create() throws Exception {
 
 		ProductManager productManager = new ProductManager();
-		CategoryManager categorymanager = new CategoryManager();
+		CategoryManager categoryManager = new CategoryManager();
 
 		Product product = productManager.getProductByPrimaryKey(getName());
 
 		if (product == null) {
-			product = new Product();
-			int i = 0;
-
-			product.setName(getName());
-			product.setDescription(getDescription());
-			product.setAvailable(getAvailable());
-			product.setImage(getImage());
-			product.setPrice(getPrice());
-			product.setCategory(categorymanager.getCategoryByPrimaryKey("Schwarz"));
-
-			productManager.saveProduct(product);
-
-			return SUCCESS;
+			if(categoryManager.getCategoryByPrimaryKey(getCategory()) != null) {
+				product = new Product();
+				product.setName(getName());
+				product.setDescription(getDescription());
+				product.setAvailable(getAvailable());
+				product.setImage(getImage());
+				product.setPrice(getPrice());
+				product.setCategory(getCategory());
+	
+				productManager.saveProduct(product);
+				addActionMessage("Sie haben das Produkt <" + getName() + "> erstellt.");
+	
+				return SUCCESS;
+			} else {
+				addActionError("Diese Kategorie existiert nicht. Bitte geben Sie eine gültige Kategorie ein!");
+				return "input";
+			}
 		} else {
 			addActionError("Produkt bereits vorhanden!");
 			return "input";
@@ -50,7 +55,9 @@ public class EditProductAction extends ActionSupport {
 		Product product = productManager.getProductByPrimaryKey(getName());
 
 		if (product != null) {
+			String name = product.getName();
 			productManager.deleteProduct(product);
+			addActionMessage("Sie haben das Produkt <" + name + "> gelöscht.");
 			return SUCCESS;
 		} else {
 			addActionError("Produkt nicht vorhanden!");
@@ -102,4 +109,14 @@ public class EditProductAction extends ActionSupport {
 	public void setPrice(double price) {
 		this.price = price;
 	}
+	
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+	
+	
 }
