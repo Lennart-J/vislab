@@ -42,11 +42,16 @@
         </action>
         
         <action name="Product_edit" class="vislab.controller.action.EditProductAction">
-            <result name="success">/pages/Product.jsp</result>
-            <result name="input">/pages/Product.jsp</result>
+            <result name="create_success">/pages/Create_Product.jsp</result>
+            <result name="create_input">/pages/Create_Product.jsp</result>
+            <result name="success">/pages/Delete_Product.jsp</result>
+            <result name="input">/pages/Delete_Product.jsp</result>
+        </action>
+        
+        <action name="Navigate_Back">
+        	<result>/pages/welcome.jsp</result>
         </action>
        
-      
     </package>
     
 

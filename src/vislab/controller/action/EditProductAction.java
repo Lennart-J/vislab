@@ -37,14 +37,14 @@ public class EditProductAction extends ActionSupport {
 				productManager.saveProduct(product);
 				addActionMessage("Sie haben das Produkt <" + getName() + "> erstellt.");
 	
-				return SUCCESS;
+				return "create_success";
 			} else {
 				addActionError("Diese Kategorie existiert nicht. Bitte geben Sie eine gültige Kategorie ein!");
-				return "input";
+				return "create_input";
 			}
 		} else {
 			addActionError("Produkt bereits vorhanden!");
-			return "input";
+			return "create_input";
 		}
 
 	}
@@ -60,7 +60,7 @@ public class EditProductAction extends ActionSupport {
 			addActionMessage("Sie haben das Produkt <" + name + "> gelöscht.");
 			return SUCCESS;
 		} else {
-			addActionError("Produkt nicht vorhanden!");
+			addActionError("Das zu löschende Produkt existiert nicht!");
 			return "input";
 		}
 	}
