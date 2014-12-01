@@ -4,6 +4,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 import vislab.model.bl.CategoryManager;
 import vislab.model.db.Category;
+import vislab.model.bl.ProductManager;
 
 public class EditCategoryAction extends ActionSupport {
 	private static final long serialVersionUID = -983183915002226000L;
@@ -18,11 +19,10 @@ public class EditCategoryAction extends ActionSupport {
 
 		if (category == null) {
 			category = new Category();
-
 			category.setName(getName());
-
+			
 			categoryManager.saveCategory(category);
-
+			addActionMessage("Sie haben die Kategorie <" + getName() + "> angelegt.");
 			return SUCCESS;
 		} else {
 			addActionError("Kategorie bereits vorhanden!");
@@ -35,10 +35,18 @@ public class EditCategoryAction extends ActionSupport {
 
 		CategoryManager categoryManager = new CategoryManager();
 		Category category = categoryManager.getCategoryByPrimaryKey(getName());
+		ProductManager productManager = new ProductManager();
 
 		if (category != null) {
-			categoryManager.deleteCategory(category);
-			return SUCCESS;
+			if (!productManager.existProductWithCategory(category.getName())) {
+				String name = category.getName();
+				categoryManager.deleteCategory(category);
+				addActionMessage("Sie haben die Kategorie <" + name + "> gelöscht.");
+				return SUCCESS;
+			} else {
+				addActionError("Bitte löschen Sie zuerst die Produkte, die sich in der Kategorie befinden!");
+				return "input";
+			}
 		} else {
 			addActionError("Kategorie nicht vorhanden!");
 			return "input";

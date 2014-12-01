@@ -25,6 +25,18 @@ public class ProductManager {
 		session.getTransaction().commit();
 		return product;
 	}
+	
+	public boolean existProductWithCategory(String category) {
+		/* a Hibernate session */
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+		session.beginTransaction();
+		List products = session.createCriteria(Product.class)
+			    .add( Restrictions.like("category", category) )
+			    .list();
+		session.getTransaction().commit();
+		return !(products == null || products.isEmpty());
+	}
 
 	public void deleteProduct(Product product) {
 		/* a Hibernate session */
@@ -62,13 +74,6 @@ public class ProductManager {
 	}
 
 	private void addLikeRestriction(Criteria criteria,
-			String propertyName, Object value) {
-		if (value != null && !value.equals("")) {
-			criteria.add(Restrictions.like(propertyName, value));
-		}
-	}
-	
-	private void addEqRestriction(Criteria criteria,
 			String propertyName, Object value) {
 		if (value != null && !value.equals("")) {
 			criteria.add(Restrictions.like(propertyName, value));

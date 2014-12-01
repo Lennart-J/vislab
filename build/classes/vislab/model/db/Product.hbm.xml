@@ -8,6 +8,10 @@
    <column length="30" name="NAME"/>
    <generator class="assigned"/>
   </id>
+  <property length="30"
+   name="category" type="string">
+   <column name="CATEGORY"/>
+  </property>
   <property length="500"
    name="description" type="text">
    <column length="500" name="DESCRIPTION"/>
@@ -21,9 +25,5 @@
   <property name="image" type="string">
    <column name="IMAGE"/>
   </property>
-  
-  <many-to-one name="Category" class="vislab.model.db.Category"
-            column="CATEGORY" unique="false" not-null="true"
-            cascade="all" />
  </class>
 </hibernate-mapping>
