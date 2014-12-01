@@ -24,6 +24,12 @@
         <action name="Register_forward">
         	<result>/pages/Registration.jsp</result>
         </action>
+        <action name="Webshop_forward">
+        	<result>/pages/Webshop.jsp</result>
+        </action>
+        <action name="EditProduct_forward">
+        	<result>/pages/ProductStart.jsp</result>
+        </action>
         
         <action name="User_login" class="vislab.controller.action.LoginAction">
             <result name="success">/pages/welcome.jsp</result>
@@ -46,10 +52,11 @@
             <result name="input">/pages/Product.jsp</result>
         </action>
         
-        <action name="Product_start" class="vislab.controller.action.StartProductAction">
-            <result name="create">/pages/Product.jsp</result>
-            <result name="delete">/pages/Product.jsp</result>
+        <action name="Product_search" class="vislab.controller.action.SearchProductAction">
+            <result name="success">/pages/Webshop.jsp</result>
+            <result name="input">/pages/Webshop.jsp</result>
         </action>
+       
       
     </package>
     
