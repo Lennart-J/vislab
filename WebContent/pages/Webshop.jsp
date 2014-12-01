@@ -34,8 +34,14 @@
 
 		<div class="products wrapper">
 			<h3>Produkte</h3>
-			<s:form action="EditProduct_forward">
-				<s:submit key="product.edit" action="EditProduct_forward"></s:submit>
+			<s:form action="CreateProduct_forward">
+				<s:submit key="product.create" action="CreateProduct_forward"></s:submit>
+			</s:form>
+			<s:form action="DeleteProduct_forward">
+				<s:submit key="product.delete" action="DeleteProduct_forward"></s:submit>
+			</s:form>
+			<s:form action="EditCategory_forward">
+				<s:submit key="category.edit" action="EditCategory_forward"></s:submit>
 			</s:form>
 			<hr>
 

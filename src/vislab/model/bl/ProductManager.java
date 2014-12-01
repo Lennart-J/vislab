@@ -32,7 +32,7 @@ public class ProductManager {
 
 		session.beginTransaction();
 		List products = session.createCriteria(Product.class)
-			    .add( Restrictions.like("category", category) )
+			    .add( Restrictions.like("Category.name", category) )
 			    .list();
 		session.getTransaction().commit();
 		return !(products == null || products.isEmpty());

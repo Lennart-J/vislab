@@ -16,7 +16,7 @@ h2 {
 }
 
 .search.wrapper {
-	width: 500px;
+	width: 530px;
 	height: auto;
 }
 .search.wrapper input{
@@ -33,15 +33,12 @@ h2 {
 .products.wrapper {
 	display: inline-block;
 	height: 400px;
-	width: 500px;
+	width: 530px;
 	overflow-y: scroll;
 }
 
 .products.wrapper form {
 	display: inline-block;
-	position: absolute;
-	right: 10px;
-	top: 20px;
 }
 
 .products.wrapper h3 {

@@ -1,13 +1,19 @@
 package vislab.controller.action;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.opensymphony.xwork2.ActionSupport;
 
 import vislab.model.bl.ProductManager;
 import vislab.model.bl.CategoryManager;
+import vislab.model.db.Category;
 import vislab.model.db.Product;
 
 public class EditProductAction extends ActionSupport {
 	private static final long serialVersionUID = -983183915002226000L;
+	
+	
 
 	private String name = null;
 	private String description = null;
@@ -32,7 +38,7 @@ public class EditProductAction extends ActionSupport {
 				product.setAvailable(getAvailable());
 				product.setImage(getImage());
 				product.setPrice(getPrice());
-				product.setCategory(getCategory());
+				product.setCategory(new Category(getCategory()));
 	
 				productManager.saveProduct(product);
 				addActionMessage("Sie haben das Produkt <" + getName() + "> erstellt.");
