@@ -1,5 +1,6 @@
 package vislab.controller.action;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,6 +10,7 @@ import vislab.model.bl.ProductManager;
 import vislab.model.bl.CategoryManager;
 import vislab.model.db.Category;
 import vislab.model.db.Product;
+import vislab.model.db.Category;
 
 public class EditProductAction extends ActionSupport {
 	private static final long serialVersionUID = -983183915002226000L;
@@ -21,6 +23,7 @@ public class EditProductAction extends ActionSupport {
 	private String image = null;
 	private double price = 0.00;
 	private String category = null;
+
 	
 	
 	public String create() throws Exception {
@@ -31,6 +34,7 @@ public class EditProductAction extends ActionSupport {
 		Product product = productManager.getProductByPrimaryKey(getName());
 
 		if (product == null) {
+
 			if(categoryManager.getCategoryByPrimaryKey(getCategory()) != null) {
 				product = new Product();
 				product.setName(getName());
@@ -48,6 +52,7 @@ public class EditProductAction extends ActionSupport {
 				addActionError("Diese Kategorie existiert nicht. Bitte geben Sie eine gültige Kategorie ein!");
 				return "create_input";
 			}
+
 		} else {
 			addActionError("Produkt bereits vorhanden!");
 			return "create_input";
@@ -135,5 +140,4 @@ public class EditProductAction extends ActionSupport {
 		}
 		super.validate();
 	}
-	
 }

@@ -22,7 +22,9 @@ public class EditCategoryAction extends ActionSupport {
 			category.setName(getName());
 			
 			categoryManager.saveCategory(category);
+
 			addActionMessage("Sie haben die Kategorie <" + getName() + "> angelegt.");
+
 			return SUCCESS;
 		} else {
 			addActionError("Kategorie bereits vorhanden!");
@@ -38,6 +40,7 @@ public class EditCategoryAction extends ActionSupport {
 		ProductManager productManager = new ProductManager();
 
 		if (category != null) {
+
 			if (!productManager.existProductWithCategory(category.getName())) {
 				String name = category.getName();
 				categoryManager.deleteCategory(category);
@@ -47,6 +50,7 @@ public class EditCategoryAction extends ActionSupport {
 				addActionError("Bitte löschen Sie zuerst die Produkte, die sich in der Kategorie befinden!");
 				return "input";
 			}
+
 		} else {
 			addActionError("Kategorie nicht vorhanden!");
 			return "input";

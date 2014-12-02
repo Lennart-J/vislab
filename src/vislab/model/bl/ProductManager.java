@@ -93,4 +93,5 @@ public class ProductManager {
 			criteria.add(Restrictions.lt(propertyName, Double.parseDouble(value.toString())));
 		}
 	}
+
 }

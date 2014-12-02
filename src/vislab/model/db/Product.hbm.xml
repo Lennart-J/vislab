@@ -5,7 +5,7 @@
 <hibernate-mapping>
  <class name="vislab.model.db.Product" table="PRODUCT">
   <id name="name" type="string">
-   <column length="30" name="NAME"/>
+   <column name="NAME"/>
    <generator class="assigned"/>
   </id>
   <property length="500"
@@ -25,6 +25,5 @@
   <many-to-one name="Category" class="vislab.model.db.Category"
            column="CATEGORY" unique="false" not-null="true"
            />
-  
  </class>
 </hibernate-mapping>

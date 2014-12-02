@@ -14,6 +14,7 @@
 	 
 	<s:form action="Product_edit" focusElement="name" >
 		<s:textfield name="name" key="prompt.product" size="25" />
+		<s:select label="Kategorie" headerKey="-1" headerValue="Kategorie auswählen" list="categories" />
 		
 		<s:submit method="delete" value="Löschen"/>
 	</s:form>
@@ -25,6 +26,7 @@
 	 <font color="red">
 	 	<s:actionerror label="label" />
 	 </font>
+
 	<font color="blue">
 		<s:actionmessage label="label" />
 	</font>
