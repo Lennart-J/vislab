@@ -7,6 +7,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title><s:text name="Teemos Teeshop" /></title>
 <s:head />
+<link type="text/css" rel="stylesheet"
+	href="${pageContext.request.contextPath}/main.css">
 </head>
 <body>
 
@@ -29,16 +31,10 @@
 	<font color="red">
 		<s:actionerror label="label" />
 	</font>
-<<<<<<< HEAD
+
 	<font color="blue">
 		<s:actionmessage label="label" />
 	</font>
-	
-=======
-	<font color="red">
-	 	<s:actionmessage/>
-	 </font>
 
->>>>>>> 033b2292f8cc1406f49c7faa72cb2ee660f4aa41
 </body>
 </html>

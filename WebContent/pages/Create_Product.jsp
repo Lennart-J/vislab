@@ -7,6 +7,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title><s:text name="welcome.title" /></title>
 <s:head />
+<link type="text/css" rel="stylesheet"
+	href="${pageContext.request.contextPath}/main.css">
 </head>
 <body>
 

@@ -7,6 +7,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title><s:text name="welcome.title"/></title>
 	<s:head/>
+	<link type="text/css" rel="stylesheet"
+	href="${pageContext.request.contextPath}/main.css">
 </head>
 <body>
 
@@ -14,7 +16,6 @@
 	 
 	<s:form action="Product_edit" focusElement="name" >
 		<s:textfield name="name" key="prompt.product" size="25" />
-		<s:select label="Kategorie" headerKey="-1" headerValue="Kategorie auswählen" list="categories" />
 		
 		<s:submit method="delete" value="Löschen"/>
 	</s:form>
