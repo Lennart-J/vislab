@@ -7,16 +7,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title><s:text name="welcome.title"/></title>
 	<s:head/>
+	<link type="text/css" rel="stylesheet"
+	href="${pageContext.request.contextPath}/main.css">
 </head>
 <body>
 
-	<h2><s:text name="welcome.title" /></h2>
+	<h2 id="detailsite"><s:text name="welcome.title" /></h2>
 	 
 	<s:form action="User_login" focusElement="username" >
 		<s:textfield name="username" key="prompt.username" size="20" />
 		<s:password name="password" key="prompt.password" size="20" /><br>
-		
-		<s:submit method="execute" value="login" align="center"/>
+		<s:submit method="execute" value="Einloggen" align="center"/>
 	</s:form>
 	 
 	 <font color="red">

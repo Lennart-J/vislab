@@ -17,6 +17,11 @@
 		
 		<s:submit method="delete" value="Löschen"/>
 	</s:form>
+	<p> 
+		<a href="<s:url action="Navigate_Back"/>">
+			<s:text name="Zurück zur Suche"/>
+		</a>
+	</p>
 	 <font color="red">
 	 	<s:actionerror label="label" />
 	 </font>

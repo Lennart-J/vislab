@@ -33,6 +33,20 @@ public class SearchProductAction extends ActionSupport {
 		}
 
 	}
+	
+	public String getDetails() {
+		ProductManager productManager = new ProductManager();
+		Product product = productManager.getProductByPrimaryKey(getName());
+		
+		if (product != null) {
+			this.product = product;
+			return "success";
+		} else {
+			addActionError("Die Detailseite konnte nicht gefunden werden!");
+			return "fail";
+		}
+		
+	}
 
 	@Override
 	public void validate() {

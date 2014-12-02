@@ -5,6 +5,8 @@
 <html>
 	<head>
 		<title><s:text name="welcome.title"/></title>
+		<link type="text/css" rel="stylesheet"
+	href="${pageContext.request.contextPath}/main.css">
 	</head>
 	
 	<body bgcolor="white">
