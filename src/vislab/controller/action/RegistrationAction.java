@@ -76,6 +76,18 @@ public class RegistrationAction extends ActionSupport {
 
 	@Override
 	public void validate() {
+		if (password.length() > 8) {
+			addFieldError("password", "Passwort nicht mehr als 8 Zeichen!");
+		}
+		if (username.length() > 8) {
+			addFieldError("username", "Benutzername nicht mehr als 8 Zeichen!");
+		}
+		if (lastname.length() > 20) {
+			addFieldError("lastname", "Nachname nicht mehr als 20 Zeichen!");
+		}
+		if (firstname.length() > 20) {
+			addFieldError("firstname", "Vorname nicht mehr als 20 Zeichen!");
+		}
 		super.validate();
 	}
 

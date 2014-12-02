@@ -53,16 +53,19 @@ public class EditCategoryAction extends ActionSupport {
 		}
 	}
 
-	@Override
-	public void validate() {
-		super.validate();
-	}
-
 	public String getName() {
 		return name;
 	}
 
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	@Override
+	public void validate() {
+		if (name.length() > 8) {
+			addFieldError("name", "Name nicht mehr als 8 Zeichen!");
+		}
+		super.validate();
 	}
 }

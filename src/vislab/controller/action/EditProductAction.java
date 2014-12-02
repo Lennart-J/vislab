@@ -71,11 +71,6 @@ public class EditProductAction extends ActionSupport {
 		}
 	}
 
-	@Override
-	public void validate() {
-		super.validate();
-	}
-
 	public String getName() {
 		return name;
 	}
@@ -124,5 +119,21 @@ public class EditProductAction extends ActionSupport {
 		this.category = category;
 	}
 	
+	@Override
+	public void validate() {
+		if (name.length() > 30) {
+			addFieldError("name", "Nachname nicht mehr als 30 Zeichen!");
+		}
+		if (description.length() > 500) {
+			addFieldError("description", "Beschreibung nicht mehr als 500 Zeichen!");
+		}
+		if (price < 0) {
+			addFieldError("price", "Negative Preise sind nicht gültig!");
+		}
+		if (available < 0) {
+			addFieldError("available", "Negative Verfügbarkeitsmengen sind nicht gültig!");
+		}
+		super.validate();
+	}
 	
 }
