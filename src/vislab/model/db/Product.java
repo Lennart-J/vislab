@@ -17,13 +17,13 @@ public class Product implements java.io.Serializable {
 	private double price;
 	private int available;
 	private String image;
-	private String category;
+	private Category category;
 
 	public Product() {
 	}
 
 	public Product(String name, String description, double price, int available,
-			String image, String category) {
+			String image, Category category) {
 		this.name = name;
 		this.description = description;
 		this.price = price;
@@ -72,11 +72,11 @@ public class Product implements java.io.Serializable {
 		this.image = image;
 	}
 
-	public String getCategory() {
+	public Category getCategory() {
 		return category;
 	}
 
-	public void setCategory(String category) {
+	public void setCategory(Category category) {
 		this.category = category;
 	}
 

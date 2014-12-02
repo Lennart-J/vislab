@@ -27,8 +27,14 @@
         <action name="Webshop_forward">
         	<result>/pages/Webshop.jsp</result>
         </action>
-        <action name="EditProduct_forward">
-        	<result>/pages/ProductStart.jsp</result>
+        <action name="CreateProduct_forward">
+        	<result>/pages/Create_Product.jsp</result>
+        </action>
+        <action name="DeleteProduct_forward">
+        	<result>/pages/Delete_Product.jsp</result>
+        </action>
+        <action name="EditCategory_forward">
+        	<result>/pages/Category.jsp</result>
         </action>
         
         <action name="User_login" class="vislab.controller.action.LoginAction">
