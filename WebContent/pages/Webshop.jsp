@@ -53,19 +53,11 @@
 					</div>
 					<div class="product-info">
 						<h3>
-							<s:property value="name" />
+							<a href="details?name=<s:property value="name"/>">
+								<s:property value="name"/>
+							</a>
 						</h3>
-						<p>
-							<s:text name="product.category" />
-							<s:property value="Category.name" />
-						</p>
-						<p>
-							<s:property value="description" />
-						</p>
-						<p>
-							<s:text name="product.available" />
-							<s:property value="available" />
-						</p>
+						
 						<p>
 							<s:text name="product.price" />
 							<s:property value="price" />

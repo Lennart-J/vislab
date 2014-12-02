@@ -61,7 +61,16 @@
         </action>
         
         <action name="Navigate_Back">
-        	<result>/pages/welcome.jsp</result>
+        	<result>/pages/Webshop.jsp</result>
+        </action>
+        
+        <action name="Navigate_Detail">
+        	<result>/pages/Detail_Product.jsp</result>
+        </action>
+        
+        <action name="details" method="getDetails" class="vislab.controller.action.SearchProductAction">
+        	<result name="success">/pages/Detail_Product.jsp</result>
+        	<result name="fail">/pages/Webshop.jsp</result>
         </action>
         
         <action name="Product_search" class="vislab.controller.action.SearchProductAction">

@@ -21,7 +21,11 @@
 		<s:submit method="create" value="Erstellen" name="create" />
 		<s:submit method="delete" value="Löschen" name="delete" />
 	</s:form>
-
+	<p> 
+		<a href="<s:url action="Navigate_Back"/>">
+			<s:text name="Zurück zur Suche"/>
+		</a>
+	</p>
 	<font color="red">
 		<s:actionerror label="label" />
 	</font>

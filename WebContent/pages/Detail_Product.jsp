@@ -7,21 +7,43 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title><s:text name="welcome.title"/></title>
 	<s:head/>
+	<link type="text/css" rel="stylesheet"
+	href="${pageContext.request.contextPath}/main.css">
 </head>
 <body>
 
-	<h2><s:text name="Produkt-Detailansicht" /></h2>
+	<h2 id="detailsite"><s:text name="product.detailview" /></h2>
 	 
-	<s:form action="Product_detail" focusElement="name" >
-		<h3><s:text name="name" /></h3>
-		<s:image url size="25" />
-		<s:textfield name="category" key="prompt.category" size="25" />
-		<s:textarea name="description" key="prompt.description" rows="5" />
-		<s:textfield name="price" key="prompt.price" size="25" />
-		<s:textfield name="available" key="prompt.available" size="25" />
-		<s:textfield name="image" key="prompt.image" size="25" /> <br>
-		
-	</s:form>
+		<div>
+					<div>
+						<img alt=""
+							src='${pageContext.request.contextPath}/images/<s:property value="product.image"/>'>
+					</div>
+					<div>
+						<h3>
+							<s:property value="product.name"/>
+						</h3>
+						<p>
+							<s:text name="product.category" />
+							<s:property value="product.category.name" />
+						</p>
+						<p>
+							<s:property value="product.description" />
+						</p>
+						<p>
+							<s:text name="product.available" />
+							<s:property value="product.available" />
+						</p>
+						<p>
+							<s:text name="product.price" />
+							<s:property value="product.price" />
+							€
+						</p>
+
+					</div>
+
+		</div> <br>
+
 	<p> 
 		<a href="<s:url action="Navigate_Back"/>">
 			<s:text name="Zurück zur Suche"/>
