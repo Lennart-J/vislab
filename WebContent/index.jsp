@@ -7,7 +7,7 @@
 	    
 	</head>
 	<body>
-		<h2>Willkommen bei Timos Teeshop!</h2>
+		<h2>Willkommen bei Teemos Teeshop!</h2>
 		
 		<p>Waren Sie schon ein mal bei uns? <a href="<s:url action="Login_forward"/>">Zur Login-Seite</a> </p>
 		<p> Noch keine Logindaten? 

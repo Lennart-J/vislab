@@ -16,6 +16,7 @@ public class LoginAction extends ActionSupport {
 	private String password = null;
 	private String firstname = "";
 	private String lastname = "";
+	private boolean IsAdmin = false;
 
 	public String execute() throws Exception {
 
@@ -43,6 +44,12 @@ public class LoginAction extends ActionSupport {
 			if (customer.getPassword().equals(getPassword())) {
 				setFirstname(customer.getFirstname());
 				setLastname(customer.getLastname());
+				
+				if(customer.getIsAdmin()) {
+					setAdmin(customer.getIsAdmin());
+					return SUCCESS;
+				}
+				
 				return SUCCESS;
 			} else {
 				addActionError(getText("error.user.passwordforgotten"));
@@ -51,6 +58,14 @@ public class LoginAction extends ActionSupport {
 			}
 		}
 
+	}
+	
+	public boolean getAdmin() {
+		return IsAdmin;
+	}
+
+	private void setAdmin(boolean admin) {
+		this.IsAdmin = admin;
 	}
 
 	public String getLastname() {
