@@ -1,4 +1,4 @@
-package vislab.model.sf;
+package de.webshop.model.sf;
 
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.*;

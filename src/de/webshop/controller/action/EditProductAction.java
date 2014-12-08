@@ -1,4 +1,4 @@
-package vislab.controller.action;
+package de.webshop.controller.action;
 
 
 import java.util.ArrayList;
@@ -6,11 +6,10 @@ import java.util.List;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-import vislab.model.bl.ProductManager;
-import vislab.model.bl.CategoryManager;
-import vislab.model.db.Category;
-import vislab.model.db.Product;
-import vislab.model.db.Category;
+import de.webshop.model.bl.CategoryManager;
+import de.webshop.model.bl.ProductManager;
+import de.webshop.model.db.Category;
+import de.webshop.model.db.Product;
 
 public class EditProductAction extends ActionSupport {
 	private static final long serialVersionUID = -983183915002226000L;

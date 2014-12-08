@@ -3,7 +3,7 @@
                                    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <!-- Generated 30.10.2014 11:14:31 by Hibernate Tools 4.0.0 -->
 <hibernate-mapping>
- <class name="vislab.model.db.Customer" table="CUSTOMER">
+ <class name="de.webshop.model.db.Customer" table="CUSTOMER">
   <id name="username" type="string">
    <column length="8" name="USERNAME"/>
    <generator class="assigned"/>

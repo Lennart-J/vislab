@@ -1,10 +1,10 @@
-package vislab.controller.action;
+package de.webshop.controller.action;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-import vislab.model.bl.CategoryManager;
-import vislab.model.db.Category;
-import vislab.model.bl.ProductManager;
+import de.webshop.model.bl.CategoryManager;
+import de.webshop.model.bl.ProductManager;
+import de.webshop.model.db.Category;
 
 public class EditCategoryAction extends ActionSupport {
 	private static final long serialVersionUID = -983183915002226000L;

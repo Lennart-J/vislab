@@ -1,9 +1,9 @@
-package vislab.model.bl;
+package de.webshop.model.bl;
 
 import org.hibernate.Session;
 
-import vislab.model.db.Customer;
-import vislab.model.sf.HibernateUtil;
+import de.webshop.model.db.Customer;
+import de.webshop.model.sf.HibernateUtil;
 
 /**
  * class für BenutzerObjekte

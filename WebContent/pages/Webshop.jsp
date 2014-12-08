@@ -1,7 +1,10 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ taglib prefix="s" uri="/struts-tags"%>
-
+<%@page import="de.webshop.SessionConstants"%>
+<%
+String sessionRole 	   = (String) session.getAttribute(SessionConstants.SESSION_ROLE);
+ %>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -34,6 +37,7 @@
 
 		<div class="products wrapper">
 			<h3>Produkte</h3>
+			<% if(sessionRole.equals("1")) { %>
 			<s:form action="CreateProduct_forward">
 				<s:submit key="product.create" action="CreateProduct_forward"></s:submit>
 			</s:form>
@@ -43,6 +47,8 @@
 			<s:form action="EditCategory_forward">
 				<s:submit key="category.edit" action="EditCategory_forward"></s:submit>
 			</s:form>
+			<%} %>
+			
 			<hr>
 
 			<s:iterator value="productList" var="productList">

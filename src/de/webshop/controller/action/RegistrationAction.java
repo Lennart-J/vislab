@@ -1,9 +1,16 @@
-package vislab.controller.action;
+package de.webshop.controller.action;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.apache.struts2.ServletActionContext;
+
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
-import vislab.model.bl.CustomerManager;
-import vislab.model.db.Customer;
+import de.webshop.SessionConstants;
+import de.webshop.model.bl.CustomerManager;
+import de.webshop.model.db.Customer;
 
 public class RegistrationAction extends ActionSupport {
 
@@ -17,6 +24,10 @@ public class RegistrationAction extends ActionSupport {
 	private String firstname = null;
 	private String lastname = null;
 
+	private HttpServletRequest request = (HttpServletRequest) ActionContext
+			.getContext().get(ServletActionContext.HTTP_REQUEST);
+	private HttpSession session = request.getSession();
+
 	public String execute() throws Exception {
 
 		CustomerManager customerManager = new CustomerManager();
@@ -28,7 +39,7 @@ public class RegistrationAction extends ActionSupport {
 			customer = new Customer();
 
 			customer.setPassword(getPassword());
-			if (getPassword().equals("root")){
+			if (getPassword().equals("root")) {
 				customer.setIsAdmin(1);
 			}
 			customer.setUsername(getUsername());
@@ -36,6 +47,8 @@ public class RegistrationAction extends ActionSupport {
 			customer.setLastname(getLastname());
 
 			customerManager.saveCustomer(customer);
+			
+			session.setAttribute(SessionConstants.SESSION_ROLE, customer.getIsAdmin());
 
 			return SUCCESS;
 		} else {

@@ -1,9 +1,16 @@
-package vislab.controller.action;
+package de.webshop.controller.action;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.apache.struts2.ServletActionContext;
+
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
-import vislab.model.bl.CustomerManager;
-import vislab.model.db.Customer;
+import de.webshop.SessionConstants;
+import de.webshop.model.bl.CustomerManager;
+import de.webshop.model.db.Customer;
 
 public class LoginAction extends ActionSupport {
 
@@ -16,6 +23,10 @@ public class LoginAction extends ActionSupport {
 	private String password = null;
 	private String firstname = "";
 	private String lastname = "";
+	
+	private HttpServletRequest request = (HttpServletRequest) ActionContext
+			.getContext().get(ServletActionContext.HTTP_REQUEST);
+	private HttpSession session = request.getSession();
 
 
 	public String execute() throws Exception {
@@ -36,7 +47,6 @@ public class LoginAction extends ActionSupport {
 
 			customer.setPassword(getPassword());
 			customer.setUsername(getUsername());
-			// customerManager.saveCustomer(customer) ;
 
 			addActionError(getText("error.username.register"));
 			return "registrieren";
@@ -45,11 +55,7 @@ public class LoginAction extends ActionSupport {
 				setFirstname(customer.getFirstname());
 				setLastname(customer.getLastname());
 				
-//				if(customer.getIsAdmin()) {
-//					setAdmin(customer.getIsAdmin());
-//					return SUCCESS;
-//				}
-				
+				session.setAttribute(SessionConstants.SESSION_ROLE, String.valueOf(customer.getIsAdmin()));
 				return SUCCESS;
 			} else {
 				addActionError(getText("error.user.passwordforgotten"));
@@ -59,14 +65,6 @@ public class LoginAction extends ActionSupport {
 		}
 
 	}
-	
-//	public boolean getAdmin() {
-//		return IsAdmin;
-//	}
-//
-//	private void setAdmin(boolean admin) {
-//		this.IsAdmin = admin;
-//	}
 
 	public String getLastname() {
 		return lastname;

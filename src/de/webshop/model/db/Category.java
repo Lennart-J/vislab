@@ -1,4 +1,4 @@
-package vislab.model.db;
+package de.webshop.model.db;
 
 // Generated 13.03.2008 13:06:16 by Hibernate Tools 3.2.0.CR1
 

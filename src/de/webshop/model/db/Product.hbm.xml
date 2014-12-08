@@ -3,7 +3,7 @@
                                    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <!-- Generated 30.10.2014 11:14:31 by Hibernate Tools 4.0.0 -->
 <hibernate-mapping>
- <class name="vislab.model.db.Product" table="PRODUCT">
+ <class name="de.webshop.model.db.Product" table="PRODUCT">
   <id name="name" type="string">
    <column name="NAME"/>
    <generator class="assigned"/>
@@ -22,7 +22,7 @@
    <column name="IMAGE"/>
   </property>
   
-  <many-to-one name="Category" class="vislab.model.db.Category"
+  <many-to-one name="Category" class="de.webshop.model.db.Category"
            column="CATEGORY" unique="false" not-null="true"
            />
  </class>

@@ -1,4 +1,4 @@
-package vislab.model.bl;
+package de.webshop.model.bl;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 
-import vislab.model.db.Product;
-import vislab.model.sf.HibernateUtil;
+import de.webshop.model.db.Product;
+import de.webshop.model.sf.HibernateUtil;
 
 /**
  * class für ProduktObjekte

@@ -37,23 +37,23 @@
         	<result>/pages/Category.jsp</result>
         </action>
         
-        <action name="User_login" class="vislab.controller.action.LoginAction">
+        <action name="User_login" class="de.webshop.controller.action.LoginAction">
             <result name="success">/pages/welcome.jsp</result>
             <result name="input">/pages/Login.jsp</result>
             <result name="registrieren">/pages/registrationPrompt.jsp</result>
         </action>
         
-        <action name="User_register" class="vislab.controller.action.RegistrationAction">
+        <action name="User_register" class="de.webshop.controller.action.RegistrationAction">
             <result name="success">/pages/welcome.jsp</result>
             <result name="input">/pages/Registration.jsp</result>
         </action>
         
-        <action name="Category_edit" class="vislab.controller.action.EditCategoryAction">
+        <action name="Category_edit" class="de.webshop.controller.action.EditCategoryAction">
             <result name="success">/pages/Category.jsp</result>
             <result name="input">/pages/Category.jsp</result>
         </action>
         
-        <action name="Product_edit" class="vislab.controller.action.EditProductAction">
+        <action name="Product_edit" class="de.webshop.controller.action.EditProductAction">
             <result name="create_success">/pages/Create_Product.jsp</result>
             <result name="create_input">/pages/Create_Product.jsp</result>
             <result name="success">/pages/Delete_Product.jsp</result>
@@ -68,12 +68,12 @@
         	<result>/pages/Detail_Product.jsp</result>
         </action>
         
-        <action name="details" method="getDetails" class="vislab.controller.action.SearchProductAction">
+        <action name="details" method="getDetails" class="de.webshop.controller.action.SearchProductAction">
         	<result name="success">/pages/Detail_Product.jsp</result>
         	<result name="fail">/pages/Webshop.jsp</result>
         </action>
         
-        <action name="Product_search" class="vislab.controller.action.SearchProductAction">
+        <action name="Product_search" class="de.webshop.controller.action.SearchProductAction">
             <result name="success">/pages/Webshop.jsp</result>
             <result name="input">/pages/Webshop.jsp</result>
         </action>

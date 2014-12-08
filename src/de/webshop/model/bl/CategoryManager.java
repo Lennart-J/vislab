@@ -1,11 +1,11 @@
-package vislab.model.bl;
+package de.webshop.model.bl;
 
 import java.util.List;
 
 import org.hibernate.Session;
 
-import vislab.model.db.Category;
-import vislab.model.sf.HibernateUtil;
+import de.webshop.model.db.Category;
+import de.webshop.model.sf.HibernateUtil;
 
 /**
  * class für KategorieObjekte

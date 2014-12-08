@@ -4,7 +4,7 @@
 <validators>
     <field name="username">
         <field-validator type="requiredstring">
-            <message key="errors.required"/>
+            <message>Bitte Benutzernamen eingeben!</message>
         </field-validator>
     </field>
     <field name="password">

@@ -1,1 +1,6 @@
-/vislab/
+/ApplicationResources.properties
+/ApplicationResources_de.properties
+/de/
+/hibernate.cfg.xml
+/log4j.properties
+/struts.xml
