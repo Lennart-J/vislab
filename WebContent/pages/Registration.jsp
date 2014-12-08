@@ -16,7 +16,9 @@
 		<s:textfield name="username" key="prompt.username" size="20"/>
 		<s:password name="password" key="prompt.password" size="20"/>
 		<s:textfield name="lastname" key="prompt.lastname" size="20"/>
-		<s:textfield name="firstname" key="prompt.firstname" size="20"/><br>
+		<s:textfield name="firstname" key="prompt.firstname" size="20"/>
+		
+	<%-- 	<s:textfield name="admin" key="prompt.admin" size="20"/><br> --%>
 		
 		<s:submit method="execute" value="register" align="center"/>
 	</s:form>

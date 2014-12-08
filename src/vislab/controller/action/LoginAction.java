@@ -16,7 +16,7 @@ public class LoginAction extends ActionSupport {
 	private String password = null;
 	private String firstname = "";
 	private String lastname = "";
-	private boolean IsAdmin = false;
+
 
 	public String execute() throws Exception {
 
@@ -45,10 +45,10 @@ public class LoginAction extends ActionSupport {
 				setFirstname(customer.getFirstname());
 				setLastname(customer.getLastname());
 				
-				if(customer.getIsAdmin()) {
-					setAdmin(customer.getIsAdmin());
-					return SUCCESS;
-				}
+//				if(customer.getIsAdmin()) {
+//					setAdmin(customer.getIsAdmin());
+//					return SUCCESS;
+//				}
 				
 				return SUCCESS;
 			} else {
@@ -60,13 +60,13 @@ public class LoginAction extends ActionSupport {
 
 	}
 	
-	public boolean getAdmin() {
-		return IsAdmin;
-	}
-
-	private void setAdmin(boolean admin) {
-		this.IsAdmin = admin;
-	}
+//	public boolean getAdmin() {
+//		return IsAdmin;
+//	}
+//
+//	private void setAdmin(boolean admin) {
+//		this.IsAdmin = admin;
+//	}
 
 	public String getLastname() {
 		return lastname;

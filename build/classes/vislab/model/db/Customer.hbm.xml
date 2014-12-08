@@ -17,7 +17,7 @@
   <property generated="never" lazy="false" name="firstname" type="string">
    <column length="20" name="FIRSTNAME"/>
   </property>
-  <property generated="never" lazy="false" name="isAdmin" type="boolean">
+  <property generated="never" lazy="false" name="isAdmin" type="int">
    <column length="20" name="ADMIN"/>
   </property>
  </class>
