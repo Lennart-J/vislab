@@ -1,21 +1,24 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <!-- Generated 30.10.2014 11:14:31 by Hibernate Tools 4.0.0 -->
 <hibernate-mapping>
-    <class name="vislab.model.db.Customer" table="CUSTOMER">
-        <id name="username" type="string">
-            <column name="USERNAME" length="15" />
-            <generator class="assigned"></generator>
-        </id>
-        <property name="password" type="string">
-            <column name="PASSWORD" length="15" />
-        </property>
-        <property name="lastname" type="string">
-            <column name="LASTNAME" length="20" />
-        </property>
-        <property name="firstname" type="string">
-            <column name="FIRSTNAME" length="20" />
-        </property>
-    </class>
+ <class name="vislab.model.db.Customer" table="CUSTOMER">
+  <id name="username" type="string">
+   <column length="8" name="USERNAME"/>
+   <generator class="assigned"/>
+  </id>
+  <property name="password" type="string">
+   <column length="8" name="PASSWORD"/>
+  </property>
+  <property name="lastname" type="string">
+   <column length="20" name="LASTNAME"/>
+  </property>
+  <property name="firstname" type="string">
+   <column length="20" name="FIRSTNAME"/>
+  </property>
+  <property name="isAdmin" type="int">
+   <column length="20" name="ADMIN"/>
+  </property>
+ </class>
 </hibernate-mapping>
